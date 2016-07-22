@@ -1,0 +1,27 @@
+1. 新建项目文件：mkdir project
+             cd project
+
+2. 初始化package.json：     npm init 
+   修改test项 ：            vim package.json     把test 里面的修改为jasmine------> "scripts": {  "test": "jasmine" },
+3. 安装jasmine ：    cnpm i jasmine -g 
+                或： cnpm i jasmine --save-dev 
+4.创建.gitignore文件 ：     touch .gitignore   
+  gi 添加忽略的文件到.gitignore :   gi webatorm >> .gitignore
+        配置.gitignore方法：
+                 第一步： 去上面的网站(最下面 右下角)复制相应的操作系统的命令 
+                       如：LINUX ：　#!/bin/zsh　对应的命令：
+　　　　　　　　　　　      echo "function gi() { curl -L -s https://www.gitignore.io/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
+                gi list :查看ｇｉ所支持的哪些系统或者工具产生的可忽略文件放到 .gitignore 文件里面，比如：linux ，windows
+                gi windows： 查看有哪些 windows 产生的文件可以忽略到 .gitignore 里面
+
+                第二步：gi webstorm >> .gitignore  ：将wenstorm 产生的可忽略的文件添加到 .gitignore 里面  
+                注意： 管道符 >>     两个管道符>>：表示添加   一个管道符> : 表示覆盖
+                                                                     
+5.初始化jasmine测试文件spec ：     jasmine init 
+
+6. 新建代码文件 ： touch run-test.js
+                  mkdir main test.js(一定要放到spec文件夹下面和support 并列) (测试文件的文件名参照 spec/support/jasmine.json :  "spec_files": [ "**/*[sS]pec.js"]  ,表示运行run-test.js 的时候它的spec测试会调用我们的文件名以 ****spec.js结尾的测试文件（调用的是我们的测试文件，我们测试文件再调用实现）
+
+
+
+
